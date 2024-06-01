@@ -1,7 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  runtimeConfig: { public: { baseApiUrl: process.env.NUXT_API_BASE_URL } },
+  runtimeConfig: { public: { baseApiUrl: process.env.API_BASE_URL } },
+  devServer: { port: 5173 },
   srcDir: "src/",
   dir: { public: "../public/" },
   serverDir: "server/",

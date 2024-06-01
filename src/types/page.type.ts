@@ -5,5 +5,7 @@ export interface IPage {
 }
 export interface IPages {
   home: IPage;
+  login: IPage;
+  register: IPage;
   "not-found": IPage;
 }
