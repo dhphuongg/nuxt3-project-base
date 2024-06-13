@@ -1,7 +1,7 @@
 import { CookieKey } from "~/constants/cookie-key.constant";
 import { pages } from "~/constants/pages.constant";
 
-interface TokenStore {
+interface ITokenStore {
   accessToken: string;
   refreshToken: string;
 }
@@ -13,7 +13,7 @@ export const useAuthStore = defineStore("auth", {
   }),
   getters: { loggedIn: ({ accessToken }): boolean => !!accessToken },
   actions: {
-    logIn({ accessToken, refreshToken }: TokenStore, redirect: boolean = true) {
+    logIn({ accessToken, refreshToken }: ITokenStore, redirect: boolean = true) {
       this.accessToken = accessToken;
       this.refreshToken = refreshToken;
       setCookie<string>(CookieKey.ACCESS_TOKEN, accessToken);
