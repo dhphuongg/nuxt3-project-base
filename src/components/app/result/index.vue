@@ -17,8 +17,8 @@ withDefaults(
   <div class="result-container">
     <div class="app-result">
       <div class="app-result-image">
-        <app-result-404-image v-if="status === 404" />
-        <app-result-500-image v-if="status === 500" />
+        <app-result-404 v-if="status === 404" />
+        <app-result-500 v-if="status === 500" />
       </div>
       <p class="title">
         <app-formatted-message :id="LocalKey.error.pageNotFound" v-if="!title && status === 404" />
