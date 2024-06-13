@@ -1,10 +1,7 @@
 {
-  "files.associations": {
-    "*.{css,scss}": "tailwindcss"
-  },
   "editor.quickSuggestions": {
     "strings": true
   },
   "scss.lint.unknownAtRules": "ignore",
-  "prettier.configPath": ".prettierrc",
+  "prettier.configPath": ".prettierrc"
 }

@@ -7,6 +7,17 @@ export default defineNuxtConfig({
   dir: { public: "../public/" },
   serverDir: "server/",
   imports: { dirs: ["stores", "types"] },
+  css: ["~/assets/styles/index.scss"],
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData:
+            '@use "~/assets/styles/_variables.scss" as *; @use "~/assets/styles/_mixins.scss" as *;'
+        }
+      }
+    }
+  },
   modules: [
     "@pinia/nuxt",
     "@vueuse/nuxt",
@@ -16,7 +27,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n"
   ],
   tailwindcss: {
-    cssPath: "~/assets/scss/tailwind.scss",
+    cssPath: "~/assets/styles/index.scss",
     configPath: "tailwind.config"
   },
   colorMode: {
