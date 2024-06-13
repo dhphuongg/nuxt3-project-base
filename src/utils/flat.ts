@@ -40,7 +40,7 @@
  * // }
  */
 export function flattenKey<T>(obj: T, parentKey?: string): T {
-  const result: any = {};
+  const result: Any = {};
 
   for (const key in obj) {
     const fullKey: string = parentKey ? `${parentKey}.${key}` : key;

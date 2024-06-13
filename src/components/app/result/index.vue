@@ -21,11 +21,11 @@ withDefaults(
         <app-result-500 v-if="status === 500" />
       </div>
       <p class="title">
-        <app-formatted-message :id="LocalKey.error.pageNotFound" v-if="!title && status === 404" />
-        <app-formatted-message :id="LocalKey.error.wrong" v-else-if="!title || status === 500" />
+        <app-formatted-message v-if="!title && status === 404" :id="LocalKey.error.pageNotFound" />
+        <app-formatted-message v-else-if="!title || status === 500" :id="LocalKey.error.wrong" />
         <span v-else>{{ title }}</span>
       </p>
-      <p class="description" v-if="description">{{ description }}</p>
+      <p v-if="description" class="description">{{ description }}</p>
       <slot name="footer">
         <div class="flex gap-4">
           <app-button variant="outline" @click="$router.back()">
