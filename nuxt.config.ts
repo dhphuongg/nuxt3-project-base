@@ -25,7 +25,8 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
     "nuxt-icon",
     "@nuxtjs/i18n",
-    "@nuxt/image"
+    "@nuxt/image",
+    "@nuxt/eslint"
   ],
   tailwindcss: {
     cssPath: "~/assets/styles/index.scss",
@@ -48,5 +49,6 @@ export default defineNuxtConfig({
     defaultLocale: "vi",
     detectBrowserLanguage: { useCookie: true, cookieKey: "nuxt-app-lang" }
   },
-  image: { format: ["webp"], quality: 80 }
+  image: { format: ["webp"], quality: 80 },
+  eslint: { config: { typescript: { strict: true } } }
 });

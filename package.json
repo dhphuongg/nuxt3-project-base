@@ -14,7 +14,9 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "format": "prettier --write src/",
-    "prepare": "husky"
+    "prepare": "husky",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@nuxt/image": "^1.7.0",
@@ -28,10 +30,13 @@
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.4.1",
+    "@nuxt/eslint": "^0.3.13",
     "@nuxtjs/tailwindcss": "^6.12.0",
+    "eslint": "^9.4.0",
     "husky": "^9.0.11",
     "nuxt-icon": "^0.6.10",
     "prettier": "^3.2.5",
-    "sass": "^1.77.2"
+    "sass": "^1.77.2",
+    "typescript": "^5.4.5"
   }
 }
