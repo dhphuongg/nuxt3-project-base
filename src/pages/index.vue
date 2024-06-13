@@ -1,10 +1,7 @@
-<script setup lang="ts">
-const http = useHttp();
-const { data: dataTest } = await useAsyncData(() => http.get("https://http.cat/401"));
-console.log(dataTest);
-</script>
+<script setup lang="ts"></script>
 
 <template>
+  <nuxt-link to="/login">Login</nuxt-link>
   <nuxt-welcome />
 </template>
 

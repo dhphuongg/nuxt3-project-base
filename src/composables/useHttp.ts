@@ -144,13 +144,11 @@ class HttpSingleton extends Http {
   }
   public static getSingleton() {
     if (!this.singleton) {
-      console.log("🔥 get instance again ");
+      console.log("🔥 Get http instance");
       this.singleton = new HttpSingleton();
     }
     return this.singleton;
   }
 }
-
-// const httpInstance = HttpSingleton.getSingleton();
 
 export const useHttp = (): HttpSingleton => HttpSingleton.getSingleton();

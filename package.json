@@ -17,6 +17,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@nuxt/image": "^1.7.0",
     "@nuxtjs/i18n": "^8.3.1",
     "@pinia/nuxt": "^0.5.1",
     "@vueuse/nuxt": "^10.9.0",
